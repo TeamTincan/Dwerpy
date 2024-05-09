@@ -24,7 +24,7 @@ const randomQuoteList = [
     'I am crazy',
     'My sleep schedule --> Pro',
     'Ngl Minecraft plrs are chill asf',
-    'Did u remember to do HW?',
+    'Did u remember to do yo HW?',
     'Best site EVRR!',
     'pro gamar',
     'Blanket so warm',
@@ -49,7 +49,8 @@ const randomQuoteList = [
     'Crazy big',
     'Brainrot is everywhere',
     'You cant escape...',
-    'bruv'
+    'bruv',
+    'Sub to Rac3trase on YT!'
 ];
 
 var randomQuoteText = document.getElementById('randomQuoteText');
@@ -86,7 +87,7 @@ function openNewTab(url) {
 
     var favicon = win.document.createElement('link');
     favicon.rel = 'icon';
-    favicon.href = '/images/GoogleClassroom.png';
+    favicon.href = '/Images/GoogleClassroom.png';
 
     win.document.head.appendChild(favicon);
     win.document.body.appendChild(iframe);
