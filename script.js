@@ -86,7 +86,7 @@ function openNewTab(url) {
 
     var favicon = win.document.createElement('link');
     favicon.rel = 'icon';
-    favicon.href = '/Images/GoogleClassroom.png';
+    favicon.href = '/images/GoogleClassroom.png';
 
     win.document.head.appendChild(favicon);
     win.document.body.appendChild(iframe);
