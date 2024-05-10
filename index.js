@@ -141,9 +141,21 @@ function iframeCheck() {
     return check;
 }
 
+var inIframe;
+
 if (iframeCheck()) {
-    console.log('Loaded...');
+    var inIframe = true;
+    console.log('Loaded... | In Iframe');
 } else if (iframeCheck() != true) {
-    openNewTab(window.location.href);
-    window.location.href = 'https://google.com';
+    var inIframe = false;
+    console.log('Loaded... | Outside Iframe');
+}
+
+function cloakTab() {
+    if (inIframe) {
+        window.alert('Already Cloaked!');
+    } else {
+        openNewTab(window.location.href);
+        window.location.href = 'https://google.com';
+    }
 }

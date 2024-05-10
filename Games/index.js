@@ -17,8 +17,12 @@ function iframeCheck() {
 }
 
 if (iframeCheck()) {
-    console.log('Loaded...');
+    console.log('Loaded... | In Iframe');
 } else if (iframeCheck() != true) {
+    console.log('Loaded... | Outside Iframe');
+}
+
+function cloakTab() {
     openNewTab(window.location.href);
     window.location.href = 'https://google.com';
 }
