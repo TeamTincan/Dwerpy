@@ -10,7 +10,6 @@ body {
     display: block;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     animation: startFade 1s;
-    overflow: hidden;
 }
 
 .btn {
@@ -58,7 +57,7 @@ body {
     background-color: var(--card-color);
     border-radius: 20px;
     border: 1px solid white;
-    width: 30%;
+    width: 70%;
     font-size: 14px;
     caret-color: white;
     color: white;
@@ -68,7 +67,7 @@ body {
 .search-input:focus {
     outline: none;
     border-color: yellowgreen;
-    width: 35%;
+    width: 90%;
 }
 
 .search-input::placeholder {

@@ -53,9 +53,8 @@ const randomQuoteList = [
     'Sub to Rac3trase on YT!'
 ];
 
-const form = document.querySelector('form');
-const input = document.querySelector('input');
-var sideNav = document.getElementById('sideNav');
+const form = document.getElementsByClassName('formSearch')[0];
+const input = document.getElementsByClassName('search-input')[0];
 var main = document.getElementById('Main');
 
 if (form && input) {
@@ -147,10 +146,10 @@ var inIframe;
 
 if (iframeCheck()) {
     var inIframe = true;
-    console.log('Loaded... | In Iframe');
+    console.log('Loaded...');
 } else if (iframeCheck() != true) {
     var inIframe = false;
-    console.log('Loaded... | Outside Iframe');
+    console.log('Loaded...');
 }
 
 function cloakTab() {

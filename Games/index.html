@@ -4,31 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
     <title>Dwerpy - Games</title>
     <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
-    <h1>Games</h1>
+    <div id="Main">
+        <h1>Games</h1>
 
-    <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/1v1lol/index.html'));">1v1.lol</button>
-    <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/just-fall/index.html'));">Just Fall</button>
-    <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/sm64/index.html'));">Super Mario 64</button>
-    <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/slope/index.html'));">Slope</button>
-    <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/baldis-basics/index.html'));">Baldis Basics</button>
-    <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/basketball-stars/index.html'));">Basketball Stars</button>
-    <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/bitlife/index.html'));">Bitlife</button>
-    <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/ovo/index.html'));">OvO</button>
+        <input id="gameInput" class="gamesearch-input" placeholder="Search Games..." onkeyup="search()">
 
-    <br>
+        <br><br>
 
-    <h2>More Coming Soon...</h2>
+        <div id="gameButtons">
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/1v1lol/index.html'));">1v1.lol</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/just-fall/index.html'));">JustFall.lol</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/sm64/index.html'));">Super Mario 64</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/slope/index.html'));">Slope</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/baldis-basics/index.html'));">Baldis Basics</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/basketball-stars/index.html'));">Basketball Stars</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/bitlife/index.html'));">Bitlife</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/ovo/index.html'));">OvO</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/subway-surfers/index.html'));">Subway Surfers</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/10-minutes-till-dawn/index.html'));">10 Minutes Till Dawn</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/1/index.html'));">1</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/100ng/index.html'));">100 Pong</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/2048-multitask/index.html'));">2048 Multitask</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/1v1space/index.html'));">1v1 Space</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/2048/index.html'));">2048</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/CMM Client/CMM Client.html'));">CMM Client</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/9007199254740992/index.html'));">9007199254740992</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/99balls/index.html'));">99 Balls</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/DogeMiner/index.html'));">Doge Miner</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/Dogeminer2/index.html'));">Doge Miner 2</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/HexGL/index.html'));">HexGL</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/Rocket-League/index.html'));">Weird Rocket League</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/OfflineParadise/index.html'));">Offline Paradise</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/MonkeyMart/index.html'));">Monkey Mart</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/Stickman-Survival/index.html'));">Stickman Survival</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/ShapeShootout/index.html'));">Shape Shootout</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/Run 2/index.html'));">Run 2</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/Trimps/index.html'));">Trimps</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/a-dance-of-fire-and-ice/index.html'));">A Dance of Fire and Ice</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/achievementunlocked/index.html'));">Achievement Unlocked</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/adventure-drivers/index.html'));">Adventure Drivers</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/adrenalinechallenge/index.html'));">Adrenline Challenge</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/adarkroom/index.html'));">A Dark Room</button>
+            <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/ages-of-conflict/index.html'));">Ages of Conflict</button>    
+        </div>
+
+        <br>
+
+        <h2>More Coming Soon...</h2>
+    </div>
+
+    <script src="./index.js"></script>
+    <script src="../index.js"></script>
+    <script src="../uv/uv.bundle.js"></script>
+    <script src="../uv/uv.config.js"></script>
 </body>
-
-<script src="./index.js"></script>
-<script src="../index.js"></script>
-<script src="../uv/uv.bundle.js"></script>
-<script src="../uv/uv.config.js"></script>
 
 </html>
