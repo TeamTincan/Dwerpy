@@ -88,6 +88,10 @@ function openNewTab(url) {
 
     var win = window.open('about:blank', '_blank');
 
+    if (win === null || typeof win === 'undefined') {
+        window.alert('Popups Blocked... \nAllow Popups!');
+    }
+
     win.document.body.style.margin = '0';
     win.document.body.style.height = '100vh';
     win.document.title = 'Home';
