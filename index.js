@@ -70,7 +70,7 @@ form.addEventListener('submit', async event => {
     });
 });
 
-function isUrl(val = ''){
+function isUrl(val = '') {
     if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
     return false;
 };
@@ -86,7 +86,7 @@ function openNewTab(url) {
         url = 'https://' + url;
     }
 
-    var win = window.open();
+    var win = window.open('about:blank', '_blank');
 
     win.document.body.style.margin = '0';
     win.document.body.style.height = '100vh';
@@ -119,4 +119,21 @@ function openDiscoInv() {
 
 function btnPlay() {
     alert('Beta, wait for more updates!');
+}
+
+function iframeCheck() {
+    var check = false
+
+    if (window.self !== window.top) {
+        var check = true;
+    }
+
+    return check;
+}
+
+if (iframeCheck()) {
+    console.log('Loaded...');
+} else if (iframeCheck() != true) {
+    openNewTab(window.location.href);
+    window.location.href = 'https://google.com';
 }
