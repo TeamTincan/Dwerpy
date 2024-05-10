@@ -1,11 +1,3 @@
-function openDiscoInv() {
-    window.location.href = 'discord://-/invite/wf3szSc7hB/login';
-}
-
-function btnPlay() {
-    alert('Beta, wait for more updates!');
-}
-
 function iframeCheck() {
     var check = false
 
