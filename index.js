@@ -90,7 +90,7 @@ function openNewTab(url) {
 
     var favicon = win.document.createElement('link');
     favicon.rel = 'icon';
-    favicon.href = './Images/GoogleClassroom.png';
+    favicon.href = '/Images/GoogleClassroom.png';
 
     win.document.head.appendChild(favicon);
     win.document.body.appendChild(iframe);
@@ -107,7 +107,7 @@ form.addEventListener('submit', async event => {
         if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
         else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
 
-
+        window.alert('If it does not work the first time click again!')
         openNewTab(window.location.origin.concat(__uv$config.prefix + __uv$config.encodeUrl(url)));
     });
 });
