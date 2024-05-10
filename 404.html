@@ -4,23 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <title>404 | Not Found</title>
+    <title>Page Not Found...</title>
 </head>
 
 <body>
-    <h1 class="errorPage">
-        404
-    </h1>
-    <h2>
-        We can't find that page
-    </h2>
+    <div class="Main">
+        <h1 class="errorPage">
+            404
+        </h1>
 
-    <br>
+        <h2>
+            We can't find that page
+        </h2>
 
-    <p>
-        We're fairly sure that page used to be here, but seems to have gone missing. We do apologise on it's behalf.
-    </p>
+        <br>
+
+        <div class="container" style="margin-bottom: 25px;">
+            <div class="typeWriter">We're fairly sure that page used to be here, but seems to have gone missing. We do apologise on it's behalf.</div>
+        </div>
+    </div>
 </body>
 
 </html>
@@ -29,5 +31,94 @@
     .errorPage {
         font-size: 100px;
         color: greenyellow;
+    }
+
+    * {
+        text-align: center;
+        position: relative;
+        margin: auto;
+        background-color: black;
+        color: white;
+    }
+
+    body {
+        display: block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        animation: startFade 1s;
+    }
+
+    .btn {
+        margin: 15px;
+        transition: 0.3s ease-out;
+        font-size: 125%;
+        border-radius: 20px;
+        border: none;
+        outline: solid;
+        outline-width: 1px;
+        outline-color: white;
+        width: 30%;
+        height: 40px;
+        display: inline-block;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn:hover {
+        outline-color: greenyellow;
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    .btn:active {
+        transition: 0.1s linear;
+        filter: brightness(70%);
+        transform: scale(1);
+    }
+
+    .typeWriter {
+        overflow: hidden;
+        border-right: 1px solid yellowgreen;
+        white-space: nowrap;
+        animation: typing 2s steps(20, end) forwards, blinking .5s infinite;
+        font-size: 1.6rem;
+        width: 0;
+    }
+
+    .container {
+        display: inline-block;
+    }
+
+    #Main {
+        padding: 20px;
+        width: 90%;
+    }
+
+    @keyframes startFade {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes blinking {
+        from {
+            border-color: transparent;
+        }
+
+        to {
+            border-color: greenyellow;
+        }
     }
 </style>
