@@ -1,10 +1,10 @@
 self.__uv$config = {
-    prefix: '/uv/service/',
+    prefix: '/Proxman/uv/service/',
     bare: 'https://juniorhighmaths.tafca.co.uk/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
-    handler: '/uv/uv.handler.js',
-    bundle: '/uv/uv.bundle.js',
-    config: '/uv/uv.config.js',
-    sw: '/uv/uv.sw.js',
+    handler: '/Proxman/uv/uv.handler.js',
+    bundle: '/Proxman/uv/uv.bundle.js',
+    config: '/Proxman/uv/uv.config.js',
+    sw: '/Proxman/uv/uv.sw.js',
 };
