@@ -56,14 +56,29 @@ const randomQuoteList = [
 const form = document.querySelector('form');
 const input = document.querySelector('input');
 
+form.addEventListener('submit', async event => {
+    event.preventDefault();
+    window.navigator.serviceWorker.register('./sw.js', {
+        scope: __uv$config.prefix
+    }).then(() => {
+        let url = input.value.trim();
+        if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
+        else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
+
+        window.alert('If it does not work the first time click again!')
+        openNewTab(window.location.origin.concat(__uv$config.prefix + __uv$config.encodeUrl(url)));
+    });
+});
+
+function isUrl(val = ''){
+    if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
+    return false;
+};
+
 var randomQuoteText = document.getElementById('randomQuoteText');
 
 if (randomQuoteText) {
     randomQuoteText.textContent = randomQuoteList[(Math.floor(Math.random() * randomQuoteList.length))];
-}
-
-function btnPlay() {
-    alert('Beta, wait for more updates!');
 }
 
 function openNewTab(url) {
@@ -98,21 +113,10 @@ function openNewTab(url) {
     return win;
 }
 
-form.addEventListener('submit', async event => {
-    event.preventDefault();
-    window.navigator.serviceWorker.register('./sw.js', {
-        scope: __uv$config.prefix
-    }).then(() => {
-        let url = input.value.trim();
-        if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
-        else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
+function openDiscoInv() {
+    window.location.href = 'discord://-/invite/9vfpcYHA3V';
+}
 
-        window.alert('If it does not work the first time click again!')
-        openNewTab(window.location.origin.concat(__uv$config.prefix + __uv$config.encodeUrl(url)));
-    });
-});
-
-function isUrl(val = ''){
-    if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
-    return false;
-};
+function btnPlay() {
+    alert('Beta, wait for more updates!');
+}
