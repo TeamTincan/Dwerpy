@@ -1,0 +1,49 @@
+* {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    background-color: black;
+    color: white;
+}
+
+body {
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: startFade 1s;
+}
+
+.btn {
+    margin: 15px;
+    transition: 0.5s all ease-out;
+    font-size: 125%;
+    border-radius: 20px;
+    border: 1px;
+    outline: solid;
+    outline-width: 1px;
+    outline-color: white;
+    width: 30%;
+    height: 40px;
+    display:inline-block;
+}
+
+.btn:hover {
+    outline-color: greenyellow;
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.btn:active {
+    transition: 0.1s all linear;
+    filter: brightness(70%);
+    scale: 1;
+}
+
+@keyframes startFade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
