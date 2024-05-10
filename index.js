@@ -114,7 +114,7 @@ function openNewTab(url) {
 }
 
 function openDiscoInv() {
-    window.location.href = 'discord://-/invite/9vfpcYHA3V';
+    window.location.href = 'discord://-/invite/wf3szSc7hB/login';
 }
 
 function btnPlay() {
