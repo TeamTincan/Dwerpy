@@ -10,27 +10,29 @@
 </head>
 
 <body>
-    <h1>Welcome to Dwerpy!</h1>
+    <div id="Main">
+        <h1>Welcome to Dwerpy!</h1>
 
-    <div class="container" style="margin-bottom: 25px;">
-        <div class="typeWriter" id="randomQuoteText">undefined</div>
+        <div class="container" style="margin-bottom: 25px;">
+            <div class="typeWriter" id="randomQuoteText">undefined</div>
+        </div>
+
+        <br>
+
+        <button class="btn" onclick="btnPlay()">Start Playing</button>
+
+        <button class="btn" onclick="openDiscoInv()">Discord</button>
+
+        <button class="btn" onclick="cloakTab()">Tab Cloak</button>
+
+        <br>
+        <br>
+        <br>
+
+        <form>
+            <input class="search-input" placeholder="Search the web freely...">
+        </form>
     </div>
-
-    <br>
-
-    <button class="btn" onclick="btnPlay()">Start Playing</button>
-
-    <button class="btn" onclick="openDiscoInv()">Discord</button>
-    
-    <button class="btn" onclick="cloakTab()">Tab Cloak</button>
-
-    <br>
-    <br>
-    <br>
-
-    <form>
-        <input class="search-input" placeholder="Search the web freely...">
-    </form>
 </body>
 
 <script src="./index.js"></script>

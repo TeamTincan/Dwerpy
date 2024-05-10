@@ -10,38 +10,39 @@ body {
     display: block;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     animation: startFade 1s;
+    overflow: hidden;
 }
 
 .btn {
     margin: 15px;
-    transition: 0.5s all ease-out;
+    transition: 0.3s ease-out;
     font-size: 125%;
     border-radius: 20px;
-    border: 1px;
+    border: none;
     outline: solid;
     outline-width: 1px;
     outline-color: white;
     width: 30%;
     height: 40px;
-    display:inline-block;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .btn:hover {
     outline-color: greenyellow;
-    scale: 1.05;
+    transform: scale(1.05);
     cursor: pointer;
 }
 
 .btn:active {
-    transition: 0.1s all linear;
+    transition: 0.1s linear;
     filter: brightness(70%);
-    scale: 1;
+    transform: scale(1);
 }
 
 .typeWriter {
     overflow: hidden;
     border-right: 1px solid yellowgreen;
-    border-right-width: 1px;
     white-space: nowrap;
     animation: typing 1s steps(20, end) forwards, blinking .5s infinite;
     font-size: 1.6rem;
@@ -61,7 +62,7 @@ body {
     font-size: 14px;
     caret-color: white;
     color: white;
-    transition: 0.3s;
+    transition: width 0.3s ease;
 }
 
 .search-input:focus {
@@ -75,11 +76,15 @@ body {
     font-size: 16px;
 }
 
+#Main {
+    padding: 20px;
+    width: 90%;
+}
+
 @keyframes startFade {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
@@ -89,7 +94,6 @@ body {
     from {
         width: 0;
     }
-
     to {
         width: 100%;
     }
@@ -99,8 +103,16 @@ body {
     from {
         border-color: transparent;
     }
-
     to {
         border-color: greenyellow;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
     }
 }

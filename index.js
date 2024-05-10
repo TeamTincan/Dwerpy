@@ -55,6 +55,8 @@ const randomQuoteList = [
 
 const form = document.querySelector('form');
 const input = document.querySelector('input');
+var sideNav = document.getElementById('sideNav');
+var main = document.getElementById('Main');
 
 if (form && input) {
     form.addEventListener('submit', async event => {
