@@ -1,26 +1,5 @@
 var main = document.getElementById('Main');
 
-function iframeCheck() {
-    var check = false
-
-    if (window.self !== window.top) {
-        var check = true;
-    }
-
-    return check;
-}
-
-if (iframeCheck()) {
-    console.log('Loaded...');
-} else if (iframeCheck() != true) {
-    console.log('Loaded...');
-}
-
-function cloakTab() {
-    openNewTab(window.location.href);
-    window.location.href = 'https://google.com';
-}
-
 function search() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById('gameInput');
