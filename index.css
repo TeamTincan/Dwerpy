@@ -15,18 +15,18 @@ body {
 .btn {
     transition: 0.5s all ease-out;
     font-size: 125%;
-    border-radius: 5px;
-    border: 5px;
+    border-radius: 20px;
+    border: 1px;
     outline: solid;
-    outline-width: 3px;
+    outline-width: 1px;
     outline-color: white;
-    width: 150px;
+    width: 30%;
     height: 40px;
 }
 
 .btn:hover {
     outline-color: greenyellow;
-    scale: 1.1;
+    scale: 1.05;
     cursor: pointer;
 }
 
@@ -38,16 +38,39 @@ body {
 
 .typeWriter {
     overflow: hidden;
-    border-right: 1.5em solid yellowgreen;
-    border-right-width: 0.1em;
+    border-right: 1px solid yellowgreen;
+    border-right-width: 1px;
     white-space: nowrap;
-    animation: typing 1s steps(20, end) forwards, blinking .8s infinite;
+    animation: typing 1s steps(20, end) forwards, blinking .5s infinite;
     font-size: 1.6rem;
     width: 0;
 }
 
 .container {
     display: inline-block;
+}
+
+.search-input {
+    padding: 14px;
+    background-color: var(--card-color);
+    border-radius: 20px;
+    border: 1px solid white;
+    width: 30%;
+    font-size: 14px;
+    caret-color: white;
+    color: white;
+    transition: 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: yellowgreen;
+    width: 35%;
+}
+
+.search-input::placeholder {
+    color: grey;
+    font-size: 16px;
 }
 
 @keyframes startFade {

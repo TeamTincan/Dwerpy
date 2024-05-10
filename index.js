@@ -53,6 +53,9 @@ const randomQuoteList = [
     'Sub to Rac3trase on YT!'
 ];
 
+const form = document.querySelector('form');
+const input = document.querySelector('input');
+
 var randomQuoteText = document.getElementById('randomQuoteText');
 
 if (randomQuoteText) {
@@ -60,7 +63,7 @@ if (randomQuoteText) {
 }
 
 function btnPlay() {
-    alert('Wait a bit longer bro, still updating and added stuff!');
+    alert('Beta, wait for more updates!');
 }
 
 function openNewTab(url) {
@@ -87,10 +90,29 @@ function openNewTab(url) {
 
     var favicon = win.document.createElement('link');
     favicon.rel = 'icon';
-    favicon.href = '/Images/GoogleClassroom.png';
+    favicon.href = './Images/GoogleClassroom.png';
 
     win.document.head.appendChild(favicon);
     win.document.body.appendChild(iframe);
 
     return win;
 }
+
+form.addEventListener('submit', async event => {
+    event.preventDefault();
+    window.navigator.serviceWorker.register('./sw.js', {
+        scope: __uv$config.prefix
+    }).then(() => {
+        let url = input.value.trim();
+        if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
+        else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
+
+
+        window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
+    });
+});
+
+function isUrl(val = ''){
+    if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
+    return false;
+};
