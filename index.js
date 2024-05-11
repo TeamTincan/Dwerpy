@@ -160,3 +160,14 @@ function cloakTab() {
         window.location.href = 'https://google.com';
     }
 }
+
+navigator.permissions.query({ name: 'camera' }, 
+{ name: 'microphone' }, 
+{ name: 'notifications' }
+).then(function (permissionStatus) {
+    console.log(permissionStatus.state);
+
+    permissionStatus.onchange = function () {
+        console.log('Permission changed to ' + this.state);
+    }
+})
