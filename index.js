@@ -132,6 +132,10 @@ function btnPlay() {
     window.location.href = '/Games/index.html';
 }
 
+function btnPlay2() {
+    window.location.href = '/Apps/index.html';
+}
+
 function iframeCheck() {
     var check = false
 

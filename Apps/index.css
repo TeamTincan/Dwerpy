@@ -77,7 +77,7 @@ body {
     font-size: 16px;
 }
 
-.gamesearch-input {
+.appsearch-input {
     padding: 14px;
     background-color: var(--card-color);
     border-radius: 20px;
@@ -89,7 +89,7 @@ body {
     transition: width 0.3s ease;
 }
 
-.gamesearch-input:focus {
+.appsearch-input:focus {
     outline: none;
     border-color: yellowgreen;
     justify-content: center;
@@ -97,7 +97,7 @@ body {
     width: 35%;
 }
 
-.gamesearch-input::placeholder {
+.appsearch-input::placeholder {
     color: grey;
     font-size: 16px;
 }
