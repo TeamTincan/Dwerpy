@@ -1,0 +1,148 @@
+* {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    background-color: black;
+    color: white;
+}
+
+body {
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: startFade 1s;
+}
+
+.btn {
+    margin: 15px;
+    transition: 0.3s ease-out;
+    font-size: 125%;
+    border-radius: 20px;
+    border: none;
+    outline: solid;
+    outline-width: 1px;
+    outline-color: white;
+    width: 30%;
+    height: 40px;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn:hover {
+    outline-color: greenyellow;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.btn:active {
+    transition: 0.1s linear;
+    filter: brightness(70%);
+    transform: scale(1);
+}
+
+.typeWriter {
+    overflow: hidden;
+    border-right: 1px solid yellowgreen;
+    white-space: nowrap;
+    animation: typing 1s steps(20, end) forwards, blinking .5s infinite;
+    font-size: 1.6rem;
+    width: 0;
+}
+
+.container {
+    display: inline-block;
+}
+
+.search-input {
+    padding: 14px;
+    background-color: var(--card-color);
+    border-radius: 20px;
+    border: 1px solid white;
+    width: 30%;
+    font-size: 14px;
+    caret-color: white;
+    color: white;
+    transition: width 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: yellowgreen;
+    width: 35%;
+}
+
+.search-input::placeholder {
+    color: grey;
+    font-size: 16px;
+}
+
+.gamesearch-input {
+    padding: 14px;
+    background-color: var(--card-color);
+    border-radius: 20px;
+    border: 1px solid white;
+    width: 30%;
+    font-size: 14px;
+    caret-color: white;
+    color: white;
+    transition: width 0.3s ease;
+}
+
+.gamesearch-input:focus {
+    outline: none;
+    border-color: yellowgreen;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 35%;
+}
+
+.gamesearch-input::placeholder {
+    color: grey;
+    font-size: 16px;
+}
+
+#Main {
+    padding: 20px;
+    width: 90%;
+}
+
+::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.imgIcon {
+    width: 25px;
+    height: 25px;
+    background-color: #2d2d2d;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+@keyframes startFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinking {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: greenyellow;
+    }
+}
