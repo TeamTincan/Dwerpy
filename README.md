@@ -10,8 +10,5 @@
 - https://dwerpy.vercel.app 
 - https://dwerpy.netlify.app
 
-JOIN OUR DISCORD!
-
-<a style='text-decoration: none; color: transparent; padding: 100px 100px;' href='https://dwerpy.netlify.app/Invite'><img style='color: transparent; border-radius: 30px;' src='/Images/discord.png'></a>
-
-<img src='/Images/banner.gif'>
+<p style='display: inline-block;'>JOIN OUR DISCORD!</p> <a style='text-decoration: none; color: transparent; display: inline-block; padding: 10px 10px;' href='https://dwerpy.netlify.app/Invite'><img style='color: transparent; border-radius: 30px;' src='/Images/discord.png'></a>
+<img style='display: block;' src='/Images/banner.gif'>
