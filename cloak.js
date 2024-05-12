@@ -1,39 +1,44 @@
 function openNewTab(url, unblock) {
+    // Ensure URL has proper protocol
     if (!url.startsWith('https://') && !url.startsWith('http://')) {
         url = 'https://' + url;
     }
 
+    // Apply custom URL encoding if unblock is true
     if (unblock) {
         url = window.location.origin + __uv$config.prefix + __uv$config.encodeUrl(url);
     }
 
-    let win = window.open('about:blank', '_blank');
+    // Open a new tab
+    let newTab = window.open('about:blank', '_blank');
 
-    if (!win) {
+    if (!newTab) {
+        // Handle popup blocker
         window.alert('Popups Blocked...\nPlease allow popups!');
     } else {
-        win.document.body.style.margin = '0';
-        win.document.body.style.height = '100vh';
-        win.document.title = 'Home';
+        // Configure the new tab
+        const { document, location } = newTab;
+        document.body.style.margin = '0';
+        document.body.style.height = '100vh';
+        document.title = 'Home';
 
-        let iframe = win.document.createElement('iframe');
-        iframe.style.border = 'none';
-        iframe.style.width = '100vw';
-        iframe.style.height = '100vh';
-        iframe.style.margin = '0';
-        iframe.style.overflow = 'hidden';
+        // Create and configure an iframe
+        let iframe = document.createElement('iframe');
+        iframe.style.cssText = 'border: none; width: 100vw; height: 100vh; margin: 0; overflow: hidden;';
         iframe.referrerPolicy = 'no-referrer';
         iframe.allowFullscreen = true;
         iframe.src = url;
         iframe.id = 'PlayIframe';
 
-        let favicon = win.document.createElement('link');
+        // Set favicon for the new tab
+        let favicon = document.createElement('link');
         favicon.rel = 'icon';
         favicon.href = '/Images/GoogleClassroom.png';
 
-        win.document.head.appendChild(favicon);
-        win.document.body.appendChild(iframe);
+        // Append iframe and favicon to the new tab
+        document.head.appendChild(favicon);
+        document.body.appendChild(iframe);
     }
 
-    return win;
+    return newTab;
 }
