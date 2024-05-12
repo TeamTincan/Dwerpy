@@ -10,4 +10,8 @@
 - https://dwerpy.vercel.app 
 - https://dwerpy.netlify.app
 
+JOIN OUR DISCORD!
+
+<a style='text-decoration: none; color: transparent;' href='https://dwerpy.netlify.app/Invite'><img src='/Images/Discord.png'></a>
+
 <img src='/Images/banner.gif'>
