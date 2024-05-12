@@ -1,7 +1,13 @@
-# Dwerpy
-Beta of an Unblocked Games Site
+# Dwerpy | An Unblocked Games Site
 
-Links :
+## What We Have :
+- Built-in Proxy
+- Games
+- Discord
+- Customizable Platform
+
+## Links :
 - https://dwerpy.vercel.app 
 - https://dwerpy.netlify.app
 
+<img src='/Images/banner.gif'>
