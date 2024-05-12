@@ -1,23 +1,21 @@
-if (Notification.permission == 'default') {
+if (Notification.permission === 'default') {
     Notification.requestPermission();
 }
 
 function iframeCheck() {
-    var check = false
+    let check = false;
 
     if (window.self !== window.top) {
-        var check = true;
+        check = true;
     }
 
     return check;
 }
 
-var inIframe;
+const inIframe = iframeCheck();
 
-if (iframeCheck()) {
-    var inIframe = true;
-    console.log('Loaded...');
-} else if (iframeCheck() != true) {
-    var inIframe = false;
+if (inIframe) {
+    console.log('Loaded in iframe...');
+} else {
     console.log('Loaded...');
 }
