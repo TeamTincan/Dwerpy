@@ -12,6 +12,6 @@
 
 JOIN OUR DISCORD!
 
-<a style='text-decoration: none; color: transparent;' href='https://dwerpy.netlify.app/Invite'><img src='/Images/Discord.png'></a>
+<a style='text-decoration: none; color: transparent; padding: 100px 100px;' href='https://dwerpy.netlify.app/Invite'><img style='color: transparent; border-radius: 30px;' src='/Images/discord.png'></a>
 
 <img src='/Images/banner.gif'>
