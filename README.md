@@ -12,7 +12,7 @@
 - https://dwerpy.vercel.app 
 - https://dwerpy.netlify.app
 
-You can host this on any static hosting platoform. <br>
+You can host this on any static hosting platform. <br>
 [![Remix on Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://glitch.com/edit/#!/import/github/TeamTincan/Dwerpy)
 [![Run on Google Cloud](https://binbashbanana.github.io/deploy-buttons/buttons/remade/googlecloud.svg)](https://deploy.cloud.run/?git_repo=https://github.com/TeamTincan/Dwerpy/)
 [![Deploy with Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/TeamTincan/Dwerpy/) 
