@@ -2,7 +2,7 @@
 
 <img style='display: block;' src='/Images/banner.gif'>
 
-# By [![@Rac3trase]](https://github.com/Rac3trase)
+# By [@Rac3trase](https://github.com/Rac3trase)
 
 ## What We Have :
 - Built-in Proxy
