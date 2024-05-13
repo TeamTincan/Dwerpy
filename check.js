@@ -14,8 +14,19 @@ function iframeCheck() {
 
 const inIframe = iframeCheck();
 
-if (inIframe) {
-    console.log('Loaded in iframe...');
-} else {
-    console.log('Loaded...');
+if (!inIframe) {
+    let popUp = window.open('about:blank', '_blank');
+    var noPopup;
+
+    if (!popUp) {
+        var noPopup = true;
+        alert('It looks like you have Popups blocked! \nIn order for us to hide your history allow Popups. \nThank you.')
+    } else {
+        popUp.close();
+        var noPopup = false;
+        openNewTab(window.location.href);
+        if (!noPopup) {
+            window.location.href = 'https://classroom.google.com';
+        }
+    }
 }

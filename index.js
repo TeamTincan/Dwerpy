@@ -102,6 +102,6 @@ function cloakTab() {
         window.alert('Already Cloaked!');
     } else {
         openNewTab(window.location.href);
-        window.location.href = 'https://google.com';
+        window.location.href = 'https://classroom.google.com';
     }
 }
