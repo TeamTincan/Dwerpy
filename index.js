@@ -86,7 +86,7 @@ if (randomQuoteText) {
 
 function openDiscoInv() {
     // window.location.href = 'discord://-/invite/Uja83xcr5S/login';
-    window.location.href = '/Invite/index.html'
+    window.open('/Invite/index.html');
 }
 
 function btnPlay() {
