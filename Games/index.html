@@ -9,16 +9,6 @@
     <link rel="stylesheet" href="./index.css">
     <script type="text/javascript" src="/uv/uv.bundle.js"></script>
     <script type="text/javascript" src="/uv/uv.config.js"></script>
-
-    <script>
-        if ("serviceWorker" in navigator) {
-            window.addEventListener("load", () => {
-                navigator.serviceWorker.register("/sw.js", {
-                    scope: __uv$config.prefix,
-                });
-            });
-        }
-    </script>
 </head>
 
 <body>
@@ -97,10 +87,12 @@
             <button class="btn" onclick="openNewTab(window.location.origin.concat('/Games/worlds-hardest-game-2/index.html'));"><img class="imgIcon" src="/Games/worlds-hardest-game-2/the-worlds-hardest-game-2.jpg">Worlds Hardest Game 2</button>
         </div>
     </div>
+</body>
 
     <script type="text/javascript" src="./index.js"></script>
     <script type="text/javascript" src="/cloak.js"></script>
     <script type="text/javascript" src="/check.js"></script>
-</body>
-
+    <script src="/uv/uv.bundle.js" defer></script>
+    <script src="/uv/uv.config.js" defer></script>
+    <script src="/register-sw.js" defer></script>
 </html>
