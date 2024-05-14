@@ -12,7 +12,7 @@ function iframeCheck() {
     return check;
 }
 
-window.addEventListener("load", (event) => {
+document.addEventListener("load", (event) => {
     const inIframe = iframeCheck();
 
     if (!inIframe) {
