@@ -27,6 +27,7 @@ function openNewTab(url, unblock) {
         iframe.style.cssText = 'border: none; width: 100vw; height: 100vh; margin: 0; overflow: hidden;';
         iframe.referrerPolicy = 'no-referrer';
         iframe.allowFullscreen = true;
+        iframe.allow = 'camera; microphone; display-capture;';
         iframe.src = url;
         iframe.id = 'PlayIframe';
 

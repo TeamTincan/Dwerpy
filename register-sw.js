@@ -1,6 +1,6 @@
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-      navigator.serviceWorker.register("/uv/uv.sw.js", {
+      navigator.serviceWorker.register("/sw.js", {
           scope: __uv$config.prefix,
       });
   });
