@@ -1,3 +1,11 @@
+function giveUrl(url) {
+    var url;
+    if (url) {
+        url = window.location.origin + __uv$config.prefix + __uv$config.encodeUrl(url);
+    }
+    return url;
+}
+
 function openNewTab(url, unblock) {
     // Ensure URL has proper protocol
     if (!url.startsWith('https://') && !url.startsWith('http://')) {
@@ -6,7 +14,7 @@ function openNewTab(url, unblock) {
 
     // Apply custom URL encoding if unblock is true
     if (unblock) {
-        url = window.location.origin + __uv$config.prefix + __uv$config.encodeUrl(url);
+        url = giveUrl(url);
     }
 
     // Open a new tab
