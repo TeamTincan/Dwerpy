@@ -114,3 +114,7 @@ function cloakTab() {
         window.location.href = 'https://classroom.google.com';
     }
 }
+
+function suggestcool() {
+    openNewTab('https://psmfc5amh69.typeform.com/to/q00r6WtX', true);
+}
